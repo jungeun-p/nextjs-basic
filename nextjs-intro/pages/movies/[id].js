@@ -2,6 +2,9 @@ import { useRouter } from "next/router"
 
 export default function Default(){
     const router = useRouter();
-    console.log(router);
-    return "detail"
+    return (
+        <div>
+            <h4>{router.query.title || "loading..."}</h4>
+        </div>
+    )
 }
